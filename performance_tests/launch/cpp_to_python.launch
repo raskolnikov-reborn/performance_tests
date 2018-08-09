@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+
+  <node pkg="performance_tests" type="cpp_publisher_node" name="cpp_publisher_node"/> 
+  <node pkg="performance_tests" type="python_subscriber_node.py" name="python_subscriber_node" output="screen" >
+    <rosparam>
+      input_topic: '/cpp_publisher_node/cpp_published'
+    </rosparam>
+   </node>
+
+
+</launch>
+
